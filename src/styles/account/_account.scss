@@ -1,0 +1,39 @@
+.account {
+    max-width: 1100px;
+    margin: $margin_medium auto;
+    @include flex(row, flex-start, flex-start, $margin_medium);
+
+    &-container {
+        width: 600px;
+
+
+        .account-info {
+            @include flex(row, flex-start, center, $margin_small);
+
+            .user_img { 
+                border-radius: 50%;
+                border: 1px solid $main_orange;
+                @include flex(row, center,center);
+            }
+
+            .user_img, .user_img img {
+                width: 130px;
+                height: 130px;                
+            }
+
+            .user_info {
+                @include flex(column, flex-start, flex-start, $margin_small);
+
+                &-username {
+                    font-size: $font_medium;
+                    font-weight: 700;
+                }
+
+                &-desc {
+                    color: $light_gray;
+                }
+            }
+        }
+    }
+}
+

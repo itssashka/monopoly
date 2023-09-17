@@ -1,0 +1,39 @@
+.header_account {
+    margin-left: auto;
+
+    &-img {        
+        border: 2px solid $main_orange;
+        @include flex(row, center,center);
+        position: relative;
+        cursor: pointer;
+        @include transition;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        @include flex(row, center, center);
+    
+        .account_svg {
+            height: 100%;
+            width: 100%;
+            stroke: white;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &-login {
+        padding: 5px $margin_small;
+        background-color: $main_green;
+        border-radius: $border_radius;
+        @include transition;
+        color: $text_color;
+
+        &:hover {
+            background-color: $main_green-hover;
+        }
+    }
+
+
+}

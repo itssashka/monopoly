@@ -1,0 +1,33 @@
+.loader {
+    @include flex(row,center,center, $margin_small);
+    width: 90px;
+    height: 90px;
+
+    span {
+        width: 15px;
+        height: 15px;
+        background-color: $light_gray2;
+        border-radius: 50%;        
+        animation: 2.0s loader infinite;
+        animation-delay: calc(0.1s * var(--i));
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: translateY(0px);
+    }
+
+    10% {
+        transform: translateY(-5px);
+    }
+
+    20% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+

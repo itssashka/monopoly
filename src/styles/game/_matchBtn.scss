@@ -1,0 +1,15 @@
+.match-btn {
+    width: 100%;
+    height: 40px;
+    background-color: $main_green;
+    border-radius: $border_radius;
+    @include flex(row, center,center);
+    color: $text_color;
+    cursor: pointer;
+    @include transition;
+    user-select: none;
+
+    &:hover {
+        background-color: $main_green-hover;
+    }
+}

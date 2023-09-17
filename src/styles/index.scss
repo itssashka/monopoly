@@ -1,0 +1,44 @@
+// vars
+@import './vars/vars';
+@import './vars/mixins';
+@import './vars/default';
+
+//header 
+@import './header/header';
+@import './header/nav';
+@import './logo/logo';
+@import './header/account';
+
+@import './footer/footer';
+
+// ui
+@import './UI/myButton';
+@import './UI/line';
+@import './UI/loader';
+@import './UI/myInput';
+@import './UI/myCheckBox';
+@import './UI/myRange';
+
+// main
+@import './main/main';
+@import './find/find';
+@import './section/mySection';
+@import './login/login';
+@import './login/reg';
+@import './create/create';
+@import './rules/rules';
+@import './account/account';
+@import './account/accountHistory';
+
+
+//game
+@import './game/game';
+@import './game/board';
+@import './game/chat';
+@import './game/players';
+@import './game/cellCard';
+@import './game/chip';
+@import './game/UIField';
+@import './game/offerField';
+@import './game/matchBtn';
+@import './game/verticalLine';

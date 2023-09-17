@@ -1,0 +1,18 @@
+.logo {
+    @include flex(row, flex-start, center);
+    user-select: none;
+    cursor: pointer;
+    height: 100%;
+
+    &_svg{
+        stroke: $light_orange;
+        width: 35px;
+        height: 35px;
+    }    
+
+    &_name {
+        font-size: $font_headers;
+        font-weight: 800;
+        color: $text_color;
+    }
+}

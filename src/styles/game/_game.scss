@@ -1,0 +1,12 @@
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark_gray;
+    width: 100vw;
+    min-height: 100vh;
+
+    .game {
+        @include flex(row, flex-start, flex-start, 10px);
+    }
+}

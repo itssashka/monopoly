@@ -1,0 +1,13 @@
+.header {
+    height: 53px;    
+    width: 100%;
+    background-color: $dark_gray;
+    @include flex(row,center,center);
+    z-index: 1000;
+
+    &_container {
+        @include flex(row, flex-start, center);
+        gap: $margin_medium;
+        height: 100%;
+    }
+}

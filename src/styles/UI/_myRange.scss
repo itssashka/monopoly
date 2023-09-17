@@ -1,0 +1,9 @@
+.range {
+    @include flex(row, flex-start, center, $margin_small);
+
+    &_value {
+        padding: 2px $margin_small;
+        border: 1px solid $light_gray;
+        border-radius: $border_radius;
+    }
+}

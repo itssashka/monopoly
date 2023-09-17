@@ -1,0 +1,24 @@
+.nav {
+    @include flex(row,flex-start, center);
+    gap: $margin_small;
+
+    &-item {
+        padding: 5px $margin_small;
+        color: $light_gray2;
+        @include transition;
+        border-radius: $border_radius;
+        cursor: pointer;
+
+        &.selected {
+            background-color: $main_orange;
+            color: white;
+        }
+
+        &:hover {
+            background-color: $light_orange;
+            color: $text_color;
+        }
+
+        
+    }
+}

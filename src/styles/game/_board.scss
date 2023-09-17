@@ -1,0 +1,106 @@
+.board {
+    display: grid;
+    grid-template-columns: 98px repeat(9, 60px) 98px;
+    grid-template-rows: 98px repeat(9,60px) 98px;
+    gap: 4px;
+    padding: 25px;
+
+    &-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        grid-row: 2/11;
+        grid-column: 2/11;
+        @include flex(column,space-between,flex-start, 5px);
+    }
+
+    .cell-container {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        cursor: pointer;
+        position: relative;
+        @include flex(row, center, center);
+        user-select: none;
+
+        .chip-container{
+            position: absolute; 
+            width: 100%;
+            height: 100%;
+            @include flex(row, center, center, 5px);
+            flex-wrap: wrap;
+            left: 0;
+            top: 0;
+            z-index: 1010;
+            
+        }
+
+        .cell {
+            @include flex(row, center,center);
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 98px;
+
+            .cell__price {
+                @include flex(row,center,center);
+                color: white;
+                font-size: $font_medium;
+                font-weight: 700;               
+            }
+            
+            &__img{
+                @include flex(row,center,center);
+            }
+
+            &.right {
+                transform: rotate(90deg);
+
+                .cell__price {
+                    top: -20px;
+                    right: 0px;
+                    position: absolute;
+                    height: 20px;
+                    width: 60px;
+                }
+            }
+
+            &.left {
+                transform: rotate(90deg);
+
+                .cell__price {
+                    bottom: -20px;
+                    right: 0px;
+                    position: absolute;
+                    height: 20px;
+                    width: 60px;
+                    
+                }
+            }
+
+            &.top {
+
+                .cell__price {
+                    top: -20px;
+                    right: 0px;
+                    position: absolute;
+                    height: 20px;
+                    width: 60px;
+                    
+                }
+            }
+
+            &.bottom {
+
+                .cell__price {
+                    bottom: -20px;
+                    right: 0px;
+                    position: absolute;
+                    height: 20px;
+                    width: 60px;
+                    
+                }
+            }
+        }
+    }
+}

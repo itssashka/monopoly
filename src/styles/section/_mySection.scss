@@ -1,0 +1,20 @@
+.section {
+    padding: $margin_medium;
+    background-color: white;
+    border-radius: $border_radius;
+    width: 100%;
+    @include flex(column, flex-start, flex-start, $margin_small);
+    @include boxShadow(0px 4px 8px 0px rgba(34, 60, 80, 0.2));
+
+    &_title {
+        font-size: $font_headers;
+        font-weight: 700;
+        color: $dark_gray;
+        // padding: $margin_small $margin_medium 0 $margin_medium;
+    }
+
+    &-content {
+        padding: 0 $margin_medium 0 $margin_medium;
+        @include flex(column, flex-start, flex-start, $margin_small);
+    }
+}

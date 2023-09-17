@@ -1,0 +1,73 @@
+.game-chat {
+    width: 100%;
+    height: 100%;
+    @include flex(column,flex-end,center, 5px);
+
+    .chat-messages {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        @include flex(column, flex-end, flex-start);
+        color: $text_color;
+
+        &::-webkit-scrollbar {
+            width: 7px;
+
+            &-thumb {
+                background: $light_gray2;
+                border-radius: 5px;
+                
+                &:hover {
+                    background: #c6c6c6;
+                }
+            }
+        }
+        
+
+        &__message {
+            @include flex(row,flex-start,center, 5px);
+            font-size: $font_medium;
+        }
+    }
+
+    .chat-form {        
+        @include flex(row, flex-start, center, $margin_small);
+        overflow: hidden;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        font-size: $font_medium;
+        
+
+
+        &__input {
+            width: 100%;
+            height: 40px;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            color: $text_color;
+
+            &::placeholder {
+                color: $light_gray2;
+            }
+        }
+
+        &__btn {
+            @include flex(row, center,center);
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            border: none;
+            background-color: $light_orange;
+            cursor: pointer;
+
+            .send_svg {
+                width: 23px;
+                height: 23px;    
+                fill: none;
+                stroke: white;   
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.account_history {
+    @include flex(column, flex-start, flex-start, $margin_small);
+    width: 100%;
+
+    &_item {
+        @include flex(row, space-between, center);
+        width: 100%;
+        padding: $margin_medium 0;
+
+        .history_item-gameName {
+            width: 200px;
+
+            span {
+                font-size: 700;
+                color: $main_orange;
+            }
+        }
+
+        .history_item-date {
+            color: $light_gray;
+
+        }
+
+        .history_item-hasWon {
+            width: 200px;
+            display: flex;
+            justify-content: flex-end;
+            font-weight: 700;
+        }
+
+        .win {
+            color: $main_green;            
+        }
+
+        .loose {
+            color: $red;
+        }
+    }
+}

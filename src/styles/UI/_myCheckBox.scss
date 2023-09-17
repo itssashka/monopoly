@@ -1,0 +1,40 @@
+.checkbox {
+    @include flex(row, flex-start, center, $margin_small);
+
+    &-name{
+
+    }
+
+    input {
+        position: relative;
+        width: 50px;
+        height: 25px;
+        background-color: $light_gray2;
+        @include boxShadow(0px 0px 8px 0px rgba(34, 60, 80, 0.2) inset);
+        border-radius: 15px;
+        transition: all .2s ease-in;
+        appearance: none;
+        cursor: pointer;
+    
+        &:checked {
+            background-color: $main_green;
+
+            &:before {
+                left: 25px;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            transition: all .2s ease-in;
+            background-color: white;
+            @include boxShadow(0px 0px 8px 0px rgba(34, 60, 80, 0.2));
+        }
+    }
+}

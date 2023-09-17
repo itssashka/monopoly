@@ -1,0 +1,79 @@
+// @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.wrapper {
+    // font-family: 'DM Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    
+    background-color: $white_background;
+    position: relative;
+    // padding-bottom: 78px;
+}
+
+.container {
+    width: $container_size;
+    margin: 0 auto;
+}
+
+.headers {
+    font-size: $font_headers;
+    color: $dark_gray;
+    // font-weight: 700;
+    margin: $margin_medium 0;
+}
+
+.user_name {
+    color: $main_green;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+        color: $dark_gray;
+        border-bottom: 1px solid $main_green;
+    }
+}
+
+
+a,a:visited, a:active {
+    @include default;
+}
+
+.myLink {
+    color: $main_orange;
+    font-size: $font_small;
+    // @include transition;
+
+    &:hover {
+        color: $light_orange;
+        text-decoration: underline;
+    }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+

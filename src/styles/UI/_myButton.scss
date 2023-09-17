@@ -1,0 +1,15 @@
+.myButton{
+    padding: $margin_small $margin_medium;
+    background-color: $main_orange;
+    border-radius: $border_radius;
+    color: $text_color;
+    cursor: pointer;
+    @include transition;
+    outline: none;
+    border: none;
+    font-size: $font_small;
+
+    &:hover {
+        background-color: $light_orange;
+    }
+}

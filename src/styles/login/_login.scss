@@ -1,0 +1,21 @@
+.login{
+    width: 400px;
+    margin: $margin_medium auto;
+    @include flex(column, center,center, $margin_medium);
+}
+
+.login-container {
+    width: 100%;
+    
+    &_header {
+        margin: auto;
+        margin-bottom: $margin_small;
+        font-size: $font_headers;
+        font-weight: 700;
+    }
+
+    &_form {
+        width: 100%;
+        @include flex(column, flex-start,center, $margin_medium);
+    }
+}

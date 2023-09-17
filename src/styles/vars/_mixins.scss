@@ -1,0 +1,42 @@
+@mixin absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@mixin transition {
+    transition: all .2s ease-in-out;
+}
+
+@mixin flex($direction, $justify, $align, $gap: 0px) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin boxShadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin button($hover: $light_orange, $bgcolor: $main_orange, $height: 50px, $color: white) {
+    height: $height;
+    border-radius: $border_radius;
+    background-color: $bgcolor;
+    color: $color;
+    cursor: pointer;
+    @include transition();
+    @include flex(row, center, center);
+
+    &:hover {
+        background-color: $hover;
+    }
+}
+
+@mixin default {
+    text-decoration: none;
+    outline: none;
+}

@@ -1,0 +1,17 @@
+.create {
+    width: 400px;
+    margin: $margin_medium auto;
+
+    &-section {
+        @include flex(column, flex-start, center, $margin_medium);
+    }
+
+    &_game {
+        width: 100%;
+
+        &-form {
+            width: 100%;
+            @include flex(column, flex-start, flex-start, $margin_medium);
+        }
+    }
+}

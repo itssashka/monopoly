@@ -1,0 +1,101 @@
+.find {
+    margin-top: $margin_medium;
+    padding-bottom: 78px;
+    @include flex(row, flex-start, flex-start, $margin_small);
+
+    &_side {
+        width: 100%;
+        @include flex(column, flex-start, flex-start, $margin_small);
+    }
+}
+
+.find_games_list{
+    max-width: 715px;
+    @include flex(column, flex-start, center, $margin_medium);
+    
+}
+
+.game_card {
+    padding-bottom: $margin_small;
+    width: 100%;
+    &:not(:last-child) {
+        border-bottom: 1px solid $light_gray2;
+    }
+
+
+    @include flex(column, flex-start, flex-start, $margin_small);
+
+    .card_title {
+        font-size: $font_medium;
+        font-weight: 700;
+        color: $main_orange;
+    }
+
+    .card_players {
+        @include flex(row, start, flex-start, $margin_medium);
+        width: 100%;
+        
+        
+
+        &-item {
+            @include flex(column, center, center);
+            cursor: pointer;
+            position: relative;
+
+            .player_name div {
+                color: $light_orange;
+                border-bottom: 1px solid transparent;
+
+                &:hover {
+                    border-bottom: 1px solid $light_orange;
+                }
+            }
+        }
+
+        .player_img{
+            width: 90px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+
+
+.cross_svg {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    fill: $red;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+.card_slot {
+    @include flex(column, center, center);
+    color: $light_gray2;
+    cursor: pointer;
+
+    .plus_svg {
+        width: 90px;
+        height: 90px;
+        fill: $light_gray2;
+        @include transition;
+    
+        
+    }
+
+    &:hover .plus_svg{
+        fill: $light_gray;
+    }
+
+    &:hover{
+        color: $light_gray;
+    }
+}

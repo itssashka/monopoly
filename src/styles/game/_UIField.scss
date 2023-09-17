@@ -1,0 +1,96 @@
+.UI-field {
+    width: 100%;
+    @include flex(column, center,center);
+    background-color: $dark_gray;
+    position: absolute;
+    z-index: 990;
+    left: 0;
+    top: 0;
+    // display: none;
+
+    .btn-roll {
+        width: 100%;
+        height: 40px;
+        background-color: $main_green;
+        border-radius: $border_radius;
+        @include flex(row, center,center);
+        color: $text_color;
+        cursor: pointer;
+        @include transition;
+        user-select: none;
+
+        &:hover {
+            background-color: $main_green-hover;
+        }
+    }
+
+    .dices {
+        @include flex(row, center, center, 10px);
+        width: 100%;
+        height: 100px;
+        z-index: 1100;
+        & img {
+            width: 70px;
+        }
+
+        &__sum {
+            font-size: $font_headers;
+            font-weight: 700;
+            color: $text_color;
+        }
+    }
+
+    .buy-cell {
+        width: 100%;
+        padding: 10px;
+        @include flex(column, center, center, 10px);
+
+        &__title {
+            color: white;
+            font-size: $font_headers;
+        }
+
+        &__btns {
+            @include flex(row, center, center, 10px);
+        }
+
+        &__btn {
+            width: 200px;
+            @include flex(row,center,center);
+            height: 45px;
+            background-color: $main_green;
+            color: white;
+            cursor: pointer;
+            @include transition;
+
+            &:hover {
+                background-color: $main_green-hover;
+            }
+        }
+    }
+
+    .pay-rent {
+        width: 100%;
+        padding: 10px;
+        @include flex(column,center,center, 10px);
+
+        &__title {
+            color:white;
+            font-size: $font_headers;
+        }
+
+        &__btn {
+            width: 100%;
+            @include flex(row,center,center);
+            height: 45px;
+            background-color: $main_green;
+            color: white;
+            cursor: pointer;
+            @include transition;
+
+            &:hover {
+                background-color: $main_green-hover;
+            }
+        }
+    }
+}
